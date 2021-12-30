@@ -1,0 +1,13 @@
+## Site metadata ##
+
+title: Jekyll Actions Test
+description: How to setup GH Pages + GH Actions for use with Jekyll 4
+
+### Built settings ###
+
+url: "https://kobjs.github.io"
+baseurl: "/gh-pages"
+
+github_username: Rick Mohr
+
+theme: minima
