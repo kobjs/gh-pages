@@ -1,9 +1,15 @@
-# Gemfile
+name: Build and deploy Jekyll site to GitHub Pages
 
-source 'https://rubygems.org'
+on:
+  push:
+    branches:
+      - master # or master before October 2020
 
-gem 'jekyll', '~> 4.2'
-
-group :jekyll_plugins do
-  gem 'jekyll-timeago', '~> 0.13.1'
-end
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
